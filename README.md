@@ -1,2 +1,4 @@
 # GoatFinder-PCB
-PCB Cad Files for GoatFinder
+### PCB Files for GoatFinder
+
+Made using Eagle 8.4.1 Premium
