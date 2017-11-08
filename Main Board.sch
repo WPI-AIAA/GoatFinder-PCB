@@ -330,8 +330,13 @@
 <wire x1="-1" y1="-1.25" x2="1" y2="-1.25" width="0.05" layer="21"/>
 </package>
 <package name="BAT">
-<pad name="P$1" x="0" y="0" drill="2" shape="square"/>
-<pad name="P$2" x="4" y="0" drill="2"/>
+<pad name="P$1" x="-3.175" y="0" drill="1.9" shape="square"/>
+<pad name="P$2" x="3.175" y="0" drill="1.9"/>
+<hole x="-7.625" y="0" drill="2.05"/>
+<wire x1="-7" y1="3.81" x2="7" y2="3.81" width="0.127" layer="21"/>
+<wire x1="7" y1="3.81" x2="7" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="7" y1="-3.81" x2="-7" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-7" y1="-3.81" x2="-7" y2="3.81" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1444,13 +1449,12 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="76.2" y1="-22.86" x2="60.96" y2="-22.86" width="0.1524" layer="91"/>
 <junction x="76.2" y="-22.86"/>
 <wire x1="60.96" y1="-22.86" x2="53.34" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="-22.86" x2="40.64" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-22.86" x2="33.02" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-22.86" x2="170.18" y2="-22.86" width="0.1524" layer="91"/>
 <label x="43.18" y="-22.86" size="1.778" layer="95"/>
 <pinref part="U$7" gate="G$1" pin="P$2"/>
 <wire x1="170.18" y1="-22.86" x2="182.88" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="-22.86" x2="190.5" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="-22.86" x2="205.74" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="-5.08" x2="60.96" y2="-22.86" width="0.1524" layer="91"/>
 <junction x="60.96" y="-22.86"/>
 <pinref part="U$10" gate="G$1" pin="P$2"/>
@@ -1461,7 +1465,6 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <junction x="182.88" y="-22.86"/>
 <pinref part="U$12" gate="G$1" pin="P$2"/>
 <wire x1="190.5" y1="-10.16" x2="190.5" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="190.5" y="-22.86"/>
 <pinref part="R2" gate="A" pin="1"/>
 <wire x1="167.64" y1="-15.24" x2="170.18" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="-15.24" x2="170.18" y2="-22.86" width="0.1524" layer="91"/>
@@ -1584,7 +1587,7 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <label x="43.18" y="15.24" size="1.778" layer="95"/>
 <pinref part="U$7" gate="G$1" pin="P$1"/>
 <wire x1="60.96" y1="15.24" x2="53.34" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="15.24" x2="40.64" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="15.24" x2="33.02" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="15.24" x2="60.96" y2="5.08" width="0.1524" layer="91"/>
 <junction x="60.96" y="15.24"/>
 <pinref part="U$10" gate="G$1" pin="P$1"/>
