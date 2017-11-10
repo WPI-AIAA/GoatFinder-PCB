@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="3.175" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -440,6 +440,39 @@
 <wire x1="-1" y1="1.25" x2="1" y2="1.25" width="0.05" layer="21"/>
 <wire x1="-1" y1="-1.25" x2="1" y2="-1.25" width="0.05" layer="21"/>
 </package>
+<package name="TPS61088">
+<smd name="PGND" x="0" y="0" dx="3.05" dy="2.05" layer="1"/>
+<rectangle x1="-2.65" y1="0.16" x2="2.65" y2="0.39" layer="1"/>
+<rectangle x1="-2.65" y1="-0.39" x2="2.65" y2="-0.16" layer="1" rot="R180"/>
+<rectangle x1="-1.925" y1="-0.16" x2="1.925" y2="0.16" layer="1"/>
+<smd name="AGND" x="-2.225" y="0.75" dx="0.28" dy="0.85" layer="1" roundness="100" rot="R90"/>
+<smd name="VCC" x="-2.225" y="-0.75" dx="0.28" dy="0.85" layer="1" roundness="100" rot="R90"/>
+<smd name="SS" x="2.225" y="-0.75" dx="0.28" dy="0.85" layer="1" roundness="100" rot="R270"/>
+<smd name="NC@1" x="2.225" y="0.75" dx="0.28" dy="0.85" layer="1" roundness="100" rot="R270"/>
+<smd name="FB" x="-0.75" y="1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="VOUT@3" x="-0.25" y="1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="VOUT@2" x="0.25" y="1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="VOUT@1" x="0.75" y="1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="SW@1" x="-0.75" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="SW@2" x="-0.25" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="SW@3" x="0.25" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="SW@4" x="0.75" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="MODE" x="1.25" y="1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="NC@2" x="1.75" y="1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="COMP" x="-1.25" y="1.75" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="ILIM" x="-1.75" y="1.75" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="FSW" x="-1.25" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="EN" x="-1.75" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="BOOT" x="1.25" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<smd name="VIN" x="1.75" y="-1.725" dx="0.28" dy="0.85" layer="1" roundness="100"/>
+<pad name="P$22" x="0" y="0.5" drill="0.2" diameter="0.254"/>
+<pad name="P$23" x="0" y="-0.5" drill="0.2" diameter="0.254"/>
+<pad name="P$24" x="-1" y="-0.5" drill="0.2" diameter="0.254"/>
+<pad name="P$25" x="-1" y="0.5" drill="0.2" diameter="0.254"/>
+<pad name="P$26" x="1" y="0.5" drill="0.2" diameter="0.254"/>
+<pad name="P$27" x="1" y="-0.5" drill="0.2" diameter="0.254"/>
+<rectangle x1="-1.5" y1="-1" x2="1.5" y2="1" layer="16"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PI_HEADER">
@@ -811,6 +844,27 @@
 <wire x1="10.16" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
 <text x="-2.54" y="-7.62" size="1.27" layer="94">BMP280</text>
 <text x="-2.54" y="2.54" size="1.27" layer="94">BMP280</text>
+</symbol>
+<symbol name="TPS61088">
+<pin name="VCC" x="-2.54" y="-2.54" length="short"/>
+<pin name="EN" x="-2.54" y="-5.08" length="short"/>
+<pin name="FSW" x="-2.54" y="-7.62" length="short"/>
+<pin name="SW" x="-2.54" y="-10.16" length="short"/>
+<pin name="VIN" x="-2.54" y="-15.24" length="short"/>
+<pin name="BOOT" x="-2.54" y="-12.7" length="short"/>
+<pin name="SS" x="-2.54" y="-17.78" length="short"/>
+<pin name="NC" x="22.86" y="-7.62" length="short" rot="R180"/>
+<pin name="MODE" x="22.86" y="-17.78" length="short" rot="R180"/>
+<wire x1="0" y1="0" x2="20.32" y2="0" width="0.254" layer="94"/>
+<wire x1="20.32" y1="0" x2="20.32" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-22.86" x2="0" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="0" y1="-22.86" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="VOUT" x="22.86" y="-10.16" length="short" rot="R180"/>
+<pin name="FB" x="-2.54" y="-20.32" length="short"/>
+<pin name="COMP" x="22.86" y="-12.7" length="short" rot="R180"/>
+<pin name="ILIM" x="22.86" y="-15.24" length="short" rot="R180"/>
+<pin name="AGND" x="22.86" y="-2.54" length="short" rot="R180"/>
+<pin name="PGND" x="22.86" y="-5.08" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1332,6 +1386,35 @@
 <connect gate="G$1" pin="VCC@1" pad="P$5"/>
 <connect gate="G$1" pin="VCC@2" pad="P$6"/>
 <connect gate="G$1" pin="VCC@3" pad="P$8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPS61088">
+<gates>
+<gate name="G$1" symbol="TPS61088" x="-10.16" y="12.7"/>
+</gates>
+<devices>
+<device name="" package="TPS61088">
+<connects>
+<connect gate="G$1" pin="AGND" pad="AGND"/>
+<connect gate="G$1" pin="BOOT" pad="BOOT"/>
+<connect gate="G$1" pin="COMP" pad="COMP"/>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="FB" pad="FB"/>
+<connect gate="G$1" pin="FSW" pad="FSW"/>
+<connect gate="G$1" pin="ILIM" pad="ILIM"/>
+<connect gate="G$1" pin="MODE" pad="MODE"/>
+<connect gate="G$1" pin="NC" pad="NC@1 NC@2"/>
+<connect gate="G$1" pin="PGND" pad="P$22 P$23 P$24 P$25 P$26 P$27 PGND"/>
+<connect gate="G$1" pin="SS" pad="SS"/>
+<connect gate="G$1" pin="SW" pad="SW@1 SW@2 SW@3 SW@4"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+<connect gate="G$1" pin="VOUT" pad="VOUT@1 VOUT@2 VOUT@3"/>
 </connects>
 <technologies>
 <technology name=""/>

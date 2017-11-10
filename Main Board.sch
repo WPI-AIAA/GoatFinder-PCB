@@ -1260,6 +1260,7 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <part name="IC1" library="Adafruit" deviceset="TB6612FNG" device=""/>
 <part name="U$15" library="GoatFinder" deviceset="MOTOR2" device=""/>
 <part name="U$16" library="GoatFinder" deviceset="MOTOR2" device=""/>
+<part name="U$17" library="GoatFinder" deviceset="MOTOR2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1288,6 +1289,7 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <instance part="IC1" gate="G$1" x="73.66" y="55.88"/>
 <instance part="U$15" gate="G$1" x="43.18" y="68.58"/>
 <instance part="U$16" gate="G$1" x="43.18" y="45.72"/>
+<instance part="U$17" gate="G$1" x="33.02" y="-2.54"/>
 </instances>
 <busses>
 </busses>
@@ -1469,6 +1471,8 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="167.64" y1="-15.24" x2="170.18" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="-15.24" x2="170.18" y2="-22.86" width="0.1524" layer="91"/>
 <junction x="170.18" y="-22.86"/>
+<pinref part="U$17" gate="G$1" pin="P$2"/>
+<wire x1="33.02" y1="-7.62" x2="33.02" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$13" gate="G$1" pin="GND@1"/>
@@ -1597,6 +1601,23 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="91.44" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="22.86" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
 <junction x="86.36" y="15.24"/>
+<pinref part="U$17" gate="G$1" pin="P$1"/>
+<wire x1="33.02" y1="15.24" x2="33.02" y2="2.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VM3"/>
+<wire x1="91.44" y1="38.1" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="38.1" x2="93.98" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="VM2"/>
+<wire x1="93.98" y1="35.56" x2="91.44" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="35.56" x2="104.14" y2="35.56" width="0.1524" layer="91"/>
+<junction x="93.98" y="35.56"/>
+<label x="96.52" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VM1"/>
+<wire x1="91.44" y1="76.2" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
+<label x="96.52" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1799,23 +1820,6 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <pinref part="IC1" gate="G$1" pin="PWMB"/>
 <wire x1="91.44" y1="43.18" x2="104.14" y2="43.18" width="0.1524" layer="91"/>
 <label x="96.52" y="43.18" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="+12V" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="VM1"/>
-<wire x1="91.44" y1="76.2" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
-<label x="96.52" y="76.2" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="VM3"/>
-<wire x1="91.44" y1="38.1" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="38.1" x2="93.98" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="VM2"/>
-<wire x1="93.98" y1="35.56" x2="91.44" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="35.56" x2="104.14" y2="35.56" width="0.1524" layer="91"/>
-<junction x="93.98" y="35.56"/>
-<label x="96.52" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$15" class="0">
