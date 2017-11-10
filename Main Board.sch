@@ -1261,6 +1261,8 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <part name="U$15" library="GoatFinder" deviceset="MOTOR2" device=""/>
 <part name="U$16" library="GoatFinder" deviceset="MOTOR2" device=""/>
 <part name="U$17" library="GoatFinder" deviceset="MOTOR2" device=""/>
+<part name="U$18" library="GoatFinder" deviceset="220" device=""/>
+<part name="U$19" library="GoatFinder" deviceset="220" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1290,6 +1292,8 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <instance part="U$15" gate="G$1" x="43.18" y="68.58"/>
 <instance part="U$16" gate="G$1" x="43.18" y="45.72"/>
 <instance part="U$17" gate="G$1" x="33.02" y="-2.54"/>
+<instance part="U$18" gate="G$1" x="25.4" y="-2.54"/>
+<instance part="U$19" gate="G$1" x="17.78" y="-2.54"/>
 </instances>
 <busses>
 </busses>
@@ -1473,6 +1477,12 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <junction x="170.18" y="-22.86"/>
 <pinref part="U$17" gate="G$1" pin="P$2"/>
 <wire x1="33.02" y1="-7.62" x2="33.02" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="U$19" gate="G$1" pin="P$2"/>
+<pinref part="U$18" gate="G$1" pin="P$2"/>
+<wire x1="17.78" y1="-7.62" x2="25.4" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="-7.62" x2="33.02" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="25.4" y="-7.62"/>
+<junction x="33.02" y="-7.62"/>
 </segment>
 <segment>
 <pinref part="U$13" gate="G$1" pin="GND@1"/>
@@ -1603,6 +1613,12 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <junction x="86.36" y="15.24"/>
 <pinref part="U$17" gate="G$1" pin="P$1"/>
 <wire x1="33.02" y1="15.24" x2="33.02" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="U$19" gate="G$1" pin="P$1"/>
+<pinref part="U$18" gate="G$1" pin="P$1"/>
+<wire x1="17.78" y1="2.54" x2="25.4" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="2.54" x2="33.02" y2="2.54" width="0.1524" layer="91"/>
+<junction x="25.4" y="2.54"/>
+<junction x="33.02" y="2.54"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VM3"/>
