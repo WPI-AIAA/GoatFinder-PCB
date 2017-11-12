@@ -1456,9 +1456,10 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <junction x="76.2" y="-22.86"/>
 <wire x1="60.96" y1="-22.86" x2="53.34" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-22.86" x2="33.02" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="-22.86" x2="170.18" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-22.86" x2="124.46" y2="-22.86" width="0.1524" layer="91"/>
 <label x="43.18" y="-22.86" size="1.778" layer="95"/>
 <pinref part="U$7" gate="G$1" pin="P$2"/>
+<wire x1="124.46" y1="-22.86" x2="170.18" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="-22.86" x2="182.88" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="-22.86" x2="190.5" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="-5.08" x2="60.96" y2="-22.86" width="0.1524" layer="91"/>
@@ -1483,6 +1484,9 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="25.4" y1="-7.62" x2="33.02" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="25.4" y="-7.62"/>
 <junction x="33.02" y="-7.62"/>
+<wire x1="119.38" y1="-27.94" x2="124.46" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-27.94" x2="124.46" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="124.46" y="-22.86"/>
 </segment>
 <segment>
 <pinref part="U$13" gate="G$1" pin="GND@1"/>
@@ -1690,22 +1694,16 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="195.58" y1="71.12" x2="167.64" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="GPIO4" class="0">
 <segment>
-<wire x1="187.96" y1="50.8" x2="187.96" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="RESET"/>
-<wire x1="187.96" y1="91.44" x2="200.66" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U$11" gate="G$1" pin="GPIO27"/>
-<wire x1="187.96" y1="50.8" x2="167.64" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<wire x1="190.5" y1="48.26" x2="190.5" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="3D"/>
-<wire x1="190.5" y1="83.82" x2="200.66" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="U$11" gate="G$1" pin="GPIO28"/>
-<wire x1="190.5" y1="48.26" x2="167.64" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="83.82" x2="200.66" y2="83.82" width="0.1524" layer="91"/>
+<label x="193.04" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="GPIO4"/>
+<wire x1="139.7" y1="55.88" x2="132.08" y2="55.88" width="0.1524" layer="91"/>
+<label x="132.08" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -1715,15 +1713,6 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="233.68" y1="71.12" x2="233.68" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="SIGNAL"/>
 <wire x1="233.68" y1="66.04" x2="248.92" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="1PPS"/>
-<wire x1="231.14" y1="76.2" x2="210.82" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="76.2" x2="210.82" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="U$11" gate="G$1" pin="GPIO29"/>
-<wire x1="210.82" y1="45.72" x2="167.64" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -1820,11 +1809,6 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="167.64" y1="60.96" x2="177.8" y2="60.96" width="0.1524" layer="91"/>
 <label x="170.18" y="60.96" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="PWMA"/>
-<wire x1="91.44" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
-<label x="96.52" y="71.12" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="PWMB" class="0">
 <segment>
@@ -1832,55 +1816,103 @@ MOS dual H-bridge motor driver, 1.2A current 3.2A peak
 <wire x1="167.64" y1="53.34" x2="177.8" y2="53.34" width="0.1524" layer="91"/>
 <label x="170.18" y="53.34" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="GPIO11" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="AIN2"/>
+<wire x1="104.14" y1="68.58" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
+<label x="96.52" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="CE1"/>
+<wire x1="167.64" y1="78.74" x2="177.8" y2="78.74" width="0.1524" layer="91"/>
+<label x="170.18" y="78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO14" class="0">
+<segment>
+<pinref part="U$11" gate="G$1" pin="SCLK"/>
+<wire x1="167.64" y1="86.36" x2="177.8" y2="86.36" width="0.1524" layer="91"/>
+<label x="170.18" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="AIN1"/>
+<wire x1="91.44" y1="66.04" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
+<label x="96.52" y="66.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO13" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BIN1"/>
+<wire x1="104.14" y1="48.26" x2="91.44" y2="48.26" width="0.1524" layer="91"/>
+<label x="96.52" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="MISO"/>
+<wire x1="167.64" y1="88.9" x2="177.8" y2="88.9" width="0.1524" layer="91"/>
+<label x="170.18" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO12" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BIN2"/>
+<wire x1="104.14" y1="45.72" x2="91.44" y2="45.72" width="0.1524" layer="91"/>
+<label x="96.52" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="MOSI"/>
+<wire x1="177.8" y1="91.44" x2="167.64" y2="91.44" width="0.1524" layer="91"/>
+<label x="170.18" y="91.44" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO10" class="0">
+<segment>
+<pinref part="U$11" gate="G$1" pin="CE0"/>
+<wire x1="167.64" y1="81.28" x2="177.8" y2="81.28" width="0.1524" layer="91"/>
+<label x="170.18" y="81.28" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="STBY"/>
+<wire x1="104.14" y1="58.42" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
+<label x="96.52" y="58.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MOTA" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PWMA"/>
+<wire x1="91.44" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
+<label x="96.52" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MOTB" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PWMB"/>
 <wire x1="91.44" y1="43.18" x2="104.14" y2="43.18" width="0.1524" layer="91"/>
 <label x="96.52" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="GPIO5" class="0">
 <segment>
-<pinref part="U$11" gate="G$1" pin="GPIO2"/>
-<wire x1="139.7" y1="60.96" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="60.96" x2="114.3" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="AIN2"/>
-<wire x1="114.3" y1="68.58" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="RESET"/>
+<wire x1="193.04" y1="91.44" x2="200.66" y2="91.44" width="0.1524" layer="91"/>
+<label x="193.04" y="91.44" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="AIN1"/>
-<wire x1="91.44" y1="66.04" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="66.04" x2="119.38" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U$11" gate="G$1" pin="GPIO3"/>
-<wire x1="119.38" y1="58.42" x2="139.7" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="U$11" gate="G$1" pin="GPIO4"/>
-<wire x1="139.7" y1="55.88" x2="116.84" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="55.88" x2="114.3" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="STBY"/>
-<wire x1="114.3" y1="58.42" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$22" class="0">
 <segment>
 <pinref part="U$11" gate="G$1" pin="GPIO5"/>
-<wire x1="139.7" y1="53.34" x2="116.84" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="53.34" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="BIN1"/>
-<wire x1="111.76" y1="48.26" x2="91.44" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="53.34" x2="132.08" y2="53.34" width="0.1524" layer="91"/>
+<label x="132.08" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$23" class="0">
+<net name="GPIO0" class="0">
 <segment>
-<pinref part="U$11" gate="G$1" pin="GPIO6"/>
-<wire x1="139.7" y1="50.8" x2="119.38" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="50.8" x2="114.3" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="BIN2"/>
-<wire x1="114.3" y1="45.72" x2="91.44" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="1PPS"/>
+<wire x1="231.14" y1="76.2" x2="238.76" y2="76.2" width="0.1524" layer="91"/>
+<label x="233.68" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="GPIO0"/>
+<wire x1="139.7" y1="66.04" x2="132.08" y2="66.04" width="0.1524" layer="91"/>
+<label x="132.08" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
